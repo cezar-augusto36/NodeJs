@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", function(req, res){
-        res.send("Gerenciador Financeiro")
+        res.sendFile(__dirname + "/src/index.html"); //__dirname serve para puxar todo o caminho do diretorio
 })
 
 app.get("/contato", function(req, res){
