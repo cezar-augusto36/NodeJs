@@ -1,5 +1,9 @@
-var http = require('http');
+const express = require("express");
+const app = express();
 
-http.createServer(function(rec,res){
-    res.end("Gerenciador Financeiro")
-}).listen(8080);
+app.get("/", function(req, res){
+        res.send("Gerenciador Financeiro")
+})
+
+app.listen(8080);
+
