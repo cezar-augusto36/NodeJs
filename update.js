@@ -15,11 +15,11 @@ connection.connect(function(err){
     if(err) console.error('Erro ao realizar a conexão com o BD: ' + err.stack); return;
 });
 
-connection.query("INSERT INTO users(nome, email) VALUES ('Jose','jose@celke.com.br')",function(err,result){
+connection.query("UPDATE users SET nome = 'Cesar 1' WHERE id= 1 ",function(err,result){
 if(!err){
-    console.log('Usuario cadastrado com sucesso');
+    console.log('Usuario editar com sucesso');
 }else{
-    console.log('Erro ao cadastrar Usuario');
+    console.log('Erro ao editar Usuario');
 }
 });
 
