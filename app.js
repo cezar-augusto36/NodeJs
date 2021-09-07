@@ -10,7 +10,7 @@ app.get("/contato", function(req, res){
 })
 
 app.get("/sobre-empresa", function(req, res){
-    res.send("Sobre Empresa")
+    res.sendFile(__dirname+"/src/sobre-empresa.html");
 })
 
 app.get("/Blog", function(req, res){
